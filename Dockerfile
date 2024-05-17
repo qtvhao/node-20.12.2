@@ -15,7 +15,3 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     yarn --version
 COPY package.json yarn.lock /app/
 RUN yarn install --no-cache
-
-FROM scratch
-COPY --from=base / /
-WORKDIR /app/
